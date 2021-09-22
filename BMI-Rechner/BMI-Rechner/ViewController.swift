@@ -12,7 +12,13 @@ class ViewController: UIViewController {
     let geschlecht = ["männlich", "weiblich"]
     
     @IBOutlet weak var geschlechtauswaehlen: UIPickerView!
-        
+    @IBOutlet weak var gewichtTextField: UITextField!
+    @IBOutlet weak var groesseTextField: UITextField!
+    
+    
+    // Variablen für Textfields
+    var gewicht = 0
+    var groesse = 0
     
     
     
@@ -20,14 +26,23 @@ class ViewController: UIViewController {
     
     
     
-
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         geschlechtauswaehlen.delegate = self
         geschlechtauswaehlen.dataSource = self
     
     }
-
 
 }
 

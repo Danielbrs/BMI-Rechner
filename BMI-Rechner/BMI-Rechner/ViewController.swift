@@ -14,22 +14,29 @@ class ViewController: UIViewController {
     @IBOutlet weak var geschlechtauswaehlen: UIPickerView!
     @IBOutlet weak var gewichtTextField: UITextField!
     @IBOutlet weak var groesseTextField: UITextField!
-    
+    @IBOutlet weak var ausgabeLabel: UILabel!
     
     // Variablen für Textfields
-    var gewicht = 0
-    var groesse = 0
+    var gewicht = 0.0
+    var groesse = 0.0
+    var bmi = 0.0
+    var ausgabe = 0.0
     
+    // Ausrechnen des BMI Wertes
+    func bmiBerechnen() {
+        
+        bmi = gewicht / (groesse * groesse)
+        
+        // Ausgabe
+       // werteAnzeigen()
+        
+    }
     
+     func werteAnzeigen() {
     
-    
-    
-    
-    
-    
-    
-    
-    
+        let stringAusgabe = String(format: "%.2f", bmi)
+        
+    }
     
     
     

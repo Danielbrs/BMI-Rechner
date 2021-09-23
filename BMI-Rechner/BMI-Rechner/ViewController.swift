@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     var groesse = 0.0
     var bmi = 0.0
     var ausgabe = 0.0
+    var bmikomma = ""
     
     
     
@@ -35,15 +36,19 @@ class ViewController: UIViewController {
         groesse = Double(groesseTextField.text!) ?? 0.0
         
         bmi = gewicht / (groesse * groesse)
-        print(bmi)
-        
-        vc2.texte = String(bmi)
+        bmikomma = String(format: "%.2f", bmi)
+        print(bmikomma)
+    
+        vc2.texte = bmikomma
         navigationController?.pushViewController(vc2, animated: true)
+        
+        
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         let destinationVC = segue.destination as! thirdView
-        destinationVC.texte = String(bmi)
+        destinationVC.texte = String(bmikomma)
     }
     
     

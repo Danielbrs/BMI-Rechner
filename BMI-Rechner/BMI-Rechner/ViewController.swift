@@ -14,7 +14,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var geschlechtauswaehlen: UIPickerView!
     @IBOutlet weak var gewichtTextField: UITextField!
     @IBOutlet weak var groesseTextField: UITextField!
-    @IBOutlet weak var ausgabeLabel: UILabel!
+    
+    
+    
     
     // Variablen für Textfields
     var gewicht = 0.0
@@ -22,27 +24,32 @@ class ViewController: UIViewController {
     var bmi = 0.0
     var ausgabe = 0.0
     
+    
+    
     // Ausrechnen des BMI Wertes
-    func bmiBerechnen() {
+    @IBAction func bmiBerechnen(_ sender: UIButton) {
+        
+        let vc2 = thirdView(nibName: "thirdView", bundle: nil)
+        
+        gewicht = Double(gewichtTextField.text!) ?? 0.0
+        groesse = Double(groesseTextField.text!) ?? 0.0
         
         bmi = gewicht / (groesse * groesse)
+        print(bmi)
         
-        // Ausgabe
-       // werteAnzeigen()
-        
+        vc2.texte = String(bmi)
+        navigationController?.pushViewController(vc2, animated: true)
     }
     
-     func werteAnzeigen() {
-    
-        let stringAusgabe = String(format: "%.2f", bmi)
-        
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        let destinationVC = segue.destination as! thirdView
+        destinationVC.texte = String(bmi)
     }
     
     
-    
-    
-    
-    
+    func ausgeben(wert: Double){
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,7 +59,6 @@ class ViewController: UIViewController {
     }
 
 }
-
 extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -66,6 +72,16 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return geschlecht[row]
      }
-   }
+}
+   
+
+    
+    
+    
+    
+    
+    
+    
+   
     
 

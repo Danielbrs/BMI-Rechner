@@ -16,6 +16,7 @@
 		691503E826FB1619001AA133 /* BMI_RechnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691503E726FB1619001AA133 /* BMI_RechnerTests.swift */; };
 		691503F326FB1619001AA133 /* BMI_RechnerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691503F226FB1619001AA133 /* BMI_RechnerUITests.swift */; };
 		6915040126FB242F001AA133 /* 66-669874_wallpaper-linear-gradient-blue-white-mint-cream-pale.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6915040026FB242F001AA133 /* 66-669874_wallpaper-linear-gradient-blue-white-mint-cream-pale.jpg */; };
+		6921D8E226FC703000A9B340 /* thirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6921D8E126FC703000A9B340 /* thirdView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		691503F226FB1619001AA133 /* BMI_RechnerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMI_RechnerUITests.swift; sourceTree = "<group>"; };
 		691503F426FB1619001AA133 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6915040026FB242F001AA133 /* 66-669874_wallpaper-linear-gradient-blue-white-mint-cream-pale.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "66-669874_wallpaper-linear-gradient-blue-white-mint-cream-pale.jpg"; path = "Assets.xcassets/66-669874_wallpaper-linear-gradient-blue-white-mint-cream-pale.jpg"; sourceTree = "<group>"; };
+		6921D8E126FC703000A9B340 /* thirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = thirdView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		691503C426FB1616001AA133 = {
 			isa = PBXGroup;
 			children = (
+				6921D8E126FC703000A9B340 /* thirdView.swift */,
 				691503CF26FB1616001AA133 /* BMI-Rechner */,
 				691503E626FB1619001AA133 /* BMI-RechnerTests */,
 				691503F126FB1619001AA133 /* BMI-RechnerUITests */,
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6921D8E226FC703000A9B340 /* thirdView.swift in Sources */,
 				691503D526FB1616001AA133 /* ViewController.swift in Sources */,
 				691503D126FB1616001AA133 /* AppDelegate.swift in Sources */,
 				691503D326FB1616001AA133 /* SceneDelegate.swift in Sources */,

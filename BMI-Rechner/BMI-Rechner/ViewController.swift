@@ -38,11 +38,14 @@ class ViewController: UIViewController {
     
         vc2.texte = bmikomma
         navigationController?.pushViewController(vc2, animated: true)
-        //gewichtseinschaetzung(ab: vc2.abschaetzung)
+        
+        
+        
         
         if bmi < 30 {
                 
             ab = "Normalgewicht"
+            
             print(ab)
         }
         
@@ -58,6 +61,9 @@ class ViewController: UIViewController {
             print(ab)
             
         }
+        
+        
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
@@ -67,27 +73,8 @@ class ViewController: UIViewController {
     }
     
     
-    func gewichtseinschaetzung(ab: String) {
-        
-        if groesse > 1.60 && groesse < 1.70 && gewicht < 75.0 && gewicht > 60 && bmi < 30 {
-                
-            vc2.abschaetzung = "Normalgewicht"
-            
-        }
-        
-        if groesse >= 1.70 && groesse <= 1.80 && gewicht <= 100 && gewicht > 75 && bmi < 39.1 && bmi >= 30 {
-                
-            vc2.abschaetzung = "Übergewicht"
-        }
-        
-        if groesse > 1.80 && groesse <= 1.90 && gewicht >= 100 && bmi > 39.1 {
-                
-            vc2.abschaetzung = " starkes Übergewicht"
-            
-        }
-    }
+    
 
-             
     
     func ausgeben(wert: Double){
         
